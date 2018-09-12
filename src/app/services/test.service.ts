@@ -5,10 +5,8 @@ import 'rxjs/add/observable/of';
 @Injectable()
 export class TestService {
 
-  constructor() { }
-
   doWork1 (jobNumber: number): Observable<number> {
-    return Observable.of(jobNumber);
+    return Observable.of(jobNumber + 1);
   }
 
   doWork2 (jobNumber: number): Observable<number> {
@@ -20,6 +18,10 @@ export class TestService {
   }
 
   doWork4 (jobNumber: number): Observable<number> {
+    return Observable.of(jobNumber + 1);
+  }
+
+  doWork5 (jobNumber: number): Observable<number> {
     return Observable.of(jobNumber + 1);
   }
 
